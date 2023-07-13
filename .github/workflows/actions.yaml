@@ -85,7 +85,7 @@ jobs:
             --code S3Bucket=mybucket-mfrasdfasdfasdf,S3Key=${{ github.sha }}.zip \  
             --handler lambda_function.lambda_handler \
             --runtime python3.8 \  
-            --role arn:aws:iam::997160136177:role/my-lambda-role
+            --role 'arn:aws:iam::997160136177:role/my-lambda-role'
       - name: Wait 30 seconds  
         run: sleep 30  
       - name: Destroy test function  
